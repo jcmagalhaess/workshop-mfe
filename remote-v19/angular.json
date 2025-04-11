@@ -16,7 +16,9 @@
 			"architect": {
 				"build": {
 					"builder": "@angular-architects/native-federation:build",
-					"options": {},
+					"options": {
+						"tsConfig": "tsconfig.federation.base.json"
+					},
 					"configurations": {
 						"production": {
 							"target": "remote-v19:esbuild:production"

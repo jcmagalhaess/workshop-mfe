@@ -5,7 +5,8 @@ module.exports = withNativeFederation({
   name: 'remote-v19',
 
   exposes: {
-    './Component': './src/app/app.component.ts',
+    './Tesouraria': 'src/app/features/tesouraria/tesouraria.component.ts',
+    './Contabilidade': 'src/app/features/contabilidade/contabilidade.component.ts',
   },
 
   shared: {
