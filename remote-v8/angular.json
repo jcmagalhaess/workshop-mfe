@@ -110,20 +110,6 @@
               "devServerTarget": "remote-v8:serve:production"
             }
           }
-        },
-        "build-wc": {
-          "builder": "@angular-devkit/build-angular:browser",
-          "options": {
-            "outputPath": "dist/webcomponents",
-            "index": "",
-            "main": "src/main-wc.ts",
-            "polyfills": "src/polyfills.ts",
-            "tsConfig": "tsconfig.app.json",
-            "aot": false,
-            "assets": ["src/assets"],
-            "styles": ["src/styles.scss"],
-            "scripts": []
-          }
         }
       }
     }

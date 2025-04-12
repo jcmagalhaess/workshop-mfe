@@ -7,6 +7,7 @@ import {MatListModule} from '@angular/material/list';
 
 @Component({
   selector: 'app-root',
+  standalone: true,
   imports: [RouterOutlet, RouterLink, RouterLinkActive, MatSidenavModule, MatToolbarModule, MatIconModule, MatListModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
