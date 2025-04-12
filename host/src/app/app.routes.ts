@@ -12,5 +12,14 @@ export const routes: Routes = [
     {
         path: 'contabilidade',
         loadComponent: () => loadRemoteModule('remote-v19', './Contabilidade').then(c => c.ContabilidadeComponent)
+    },
+    {
+        path: 'chamada-capital',
+        loadChildren: () => loadRemoteModule({
+          type: 'manifest',
+          remoteName: 'remote_v12',
+          exposedModule: './ChamadaCapital'
+        }).then(m => m.ChamadaCapitalModule)
+
     }
 ];
