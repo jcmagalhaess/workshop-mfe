@@ -10,7 +10,7 @@ sharedMappings.register(
 
 module.exports = {
   output: {
-    uniqueName: "remoteV12",
+    uniqueName: "remoteV14",
     publicPath: "auto"
   },
   optimization: {
@@ -21,21 +21,24 @@ module.exports = {
       ...sharedMappings.getAliases(),
     }
   },
+  experiments: {
+    outputModule: true
+  },
   plugins: [
     new ModuleFederationPlugin({
+        library: { type: "module" },
 
         // For remotes (please adjust)
-        name: "remote_v12",
-        filename: "remoteEntry.js",
+        name: "remoteV14",
+        filename: "remoteEntry.json",
         exposes: {
             './ChamadaCapital': './src/app/features/chamada-capital/chamada-capital.module.ts',
         },
 
         // For hosts (please adjust)
-        // remotes: {
-        //     "mfe1": "mfe1@http://localhost:3000/remoteEntry.js",
-
-        // },
+        remotes: {
+            "remote_v12": "http://localhost:4201/remoteEntry.js",
+        },
 
         shared: share({
           "@angular/core": { singleton: true },

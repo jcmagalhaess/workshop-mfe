@@ -1,4 +1,4 @@
 {
 	"remote-v19": "http://localhost:4300/remoteEntry.json",
-  "remote_v12": "http://localhost:4201/remoteEntry.js"
+  "remoteV14": "http://localhost:4203/remoteEntry.json"
 }

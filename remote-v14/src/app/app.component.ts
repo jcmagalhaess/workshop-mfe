@@ -6,9 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'remote-v12';
-
-  public trigger() {
-    console.log('trigger');
-  }
+  title = 'remote-v14';
 }

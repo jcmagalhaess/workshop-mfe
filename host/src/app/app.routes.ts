@@ -15,11 +15,7 @@ export const routes: Routes = [
     },
     {
         path: 'chamada-capital',
-        loadChildren: () => loadRemoteModule({
-          type: 'manifest',
-          remoteName: 'remote_v12',
-          exposedModule: './ChamadaCapital'
-        }).then(m => m.ChamadaCapitalModule)
+        loadChildren: () => loadRemoteModule('remoteV14', './ChamadaCapital').then(c => c.ChamadaCapitalModule)
 
     }
 ];

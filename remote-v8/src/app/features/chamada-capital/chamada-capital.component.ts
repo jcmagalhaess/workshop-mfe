@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-chamada-capital',
@@ -7,4 +7,10 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ChamadaCapitalComponent {
   @Input() name: string = '';
+
+  @Output() triggerEmit = new EventEmitter();
+
+  public trigger() {
+    this.triggerEmit.emit();
+  }
 }
